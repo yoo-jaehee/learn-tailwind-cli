@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "./../assets/font/pretendard/pretendardvariable.css";
+@import "./../assets/font/notoserif/notoserif.css";
+@import "./../assets/font/suit/SUIT-Variable.css";
+
+@theme {
+  /* 기본 font-family 설정("Pretendard Variable") */
+  /* --font-*: initial; */
+  --font-sans: "Pretendard Variable", sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+  --font-suit: "SUIT Variable", sans-serif;
+
+  /* Index Layout을 위한 그리드 관련 변수 */
+  --lion: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@layer components {
+  .notice {
+    @apply flex border-4 border-green-700 bg-blue-950;
+
+    > div {
+      @apply p-4 text-white w-[200px] relative;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}
